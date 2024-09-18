@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50RB3T</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #696969; /* dark grey background for the site */
+            color: #ffffff; /* set all text to white */
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px;
+        }
+        
+        .grid-item {
+            background-color: #8a8a8a; /* dark grey background for buttons */
+            padding: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 50px; /* set a fixed height for all buttons */
+        }
+        
+        .grid-item:hover {
+            background-color: #ccc;
+        }
+        
+        .title-link {
+            text-decoration: none;
+            color: #ffffff; /* set link text to white */
+        }
+        
+        .title-link:hover {
+            color: #ffffff; /* keep link text white on hover */
+        }
+    </style>
+</head>
+<body>
+    <a href="https://github.com/50RB3T" class="title-link">
+        <h1>50RB3T</h1>
+    </a>
+
+    <!-- Button Configurations -->
+    <script>
+        let buttonConfigs = [
+            { id: "btnCalculator", text: "Calculator", link: "#" },
+            { id: "btnButton2", text: "Button 2", link: "#" },
+            { id: "btnButton3", text: "Button 3", link: "#" },
+            { id: "btnButton4", text: "Button 4", link: "#" },
+            { id: "btnButton5", text: "Button 5", link: "#" },
+            { id: "btnButton6", text: "Button 6", link: "#" },
+            { id: "btnButton7", text: "Button 7", link: "#" },
+            { id: "btnButton8", text: "Button 8", link: "#" },
+            { id: "btnButton9", text: "Button 9", link: "#" },
+            { id: "btnButton10", text: "Button 10", link: "#" },
+            { id: "btnButton11", text: "Button 11", link: "#" },
+            { id: "btnButton12", text: "Button 12", link: "#" },
+        ];
+    </script>
+
+    <div class="grid-container">
+        <!-- Buttons will be generated here -->
+    </div>
+
+    <script>
+        buttonConfigs.forEach((config) => {
+            let button = document.createElement("button");
+            button.className = "grid-item";
+            button.id = config.id;
+            button.textContent = config.text;
+            button.onclick = () => { window.location.href = config.link; };
+            document.querySelector(".grid-container").appendChild(button);
+        });
+    </script>
+</body>
+</html>
